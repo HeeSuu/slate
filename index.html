@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>3K棋牌 文档</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;php&quot;,&quot;java&quot;,&quot;python&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,10 +211,9 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
+              <a href="#" data-language-name="php">php</a>
+              <a href="#" data-language-name="java">java</a>
               <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,280 +221,943 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#3k" class="toc-h1 toc-link" data-title="3k">3K棋牌</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#api" class="toc-h1 toc-link" data-title="api">API 文档</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#f9ec94ddce" class="toc-h2 toc-link" data-title="">玩家注册</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#68108f8a1c" class="toc-h2 toc-link" data-title="">游戏登录链接</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#2db86dc725" class="toc-h2 toc-link" data-title="">退出游戏</a>
+                  </li>
+                  <li>
+                    <a href="#fea904ea12" class="toc-h2 toc-link" data-title="">玩家是否在线</a>
+                  </li>
+                  <li>
+                    <a href="#b5719097cd" class="toc-h2 toc-link" data-title="">查询玩家余额</a>
+                  </li>
+                  <li>
+                    <a href="#ad2df21d2b" class="toc-h2 toc-link" data-title="">转账查询</a>
+                  </li>
+                  <li>
+                    <a href="#33f595e14e" class="toc-h2 toc-link" data-title="">玩家存款</a>
+                  </li>
+                  <li>
+                    <a href="#0be10b6b8f" class="toc-h2 toc-link" data-title="">玩家取款</a>
+                  </li>
+                  <li>
+                    <a href="#d3c6a29a67" class="toc-h2 toc-link" data-title="">游戏列表</a>
+                  </li>
+                  <li>
+                    <a href="#c575acdff7" class="toc-h2 toc-link" data-title="">代理盈利</a>
+                  </li>
+                  <li>
+                    <a href="#325501528c" class="toc-h2 toc-link" data-title="">玩家盈利</a>
+                  </li>
+                  <li>
+                    <a href="#e8a022ef40" class="toc-h2 toc-link" data-title="">游戏记录查询</a>
+                  </li>
+                  <li>
+                    <a href="#c7a5042e5c" class="toc-h2 toc-link" data-title="">游戏明细查询</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#v1-0" class="toc-h1 toc-link" data-title="v1-0">文档版本 V1.0</a>
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='#'>3K棋牌</a></li>
+            <li><a href='https://github.com/lord/slate'>API文档说明</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
+        <h1 id='3k'>3K棋牌</h1>
+<p>3K棋牌说明文档</p>
+<h1 id='api'>API 文档</h1><h2 id='f9ec94ddce'>玩家注册</h2>
+<p>此接口用于玩家注册，所有玩家注册都需带上前缀，以免出现注册失败的情况</p>
+<h3 id='0e84ef42ae'>请求地址</h3>
+<p><code>{{url}}/player/register</code></p>
+<h3 id='1f9ac54b15'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>username</td>
+<td>玩家帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>nickname</td>
+<td>玩家昵称</td>
+</tr>
+<tr>
+<td>string</td>
+<td>Site_code</td>
+<td>？</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+玩家用户名请带上前缀注册。
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<aside class="warning">
+用户密码需不少于6位,部分平台对用户密码进行限制，建议6-12位，不含特殊符号。
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<h3 id='70bdef7e25'>返回参数</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>string</td>
+<td>playe</td>
+<td>注册玩家用户名</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>time</td>
+<td>账号创建时间</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<h2 id='68108f8a1c'>游戏登录链接</h2>
+<p>此接口用于生成玩家 登录游戏链接</p>
+<h3 id='0e84ef42ae-2'>请求地址</h3>
+<p><code>{{url}}//player/login</code></p>
+<h3 id='1f9ac54b15-2'>请求参数</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>username</td>
+<td>玩家帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>Game_code</td>
+<td>游戏代码</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
+<h3 id='70bdef7e25-2'>返回参数</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>string</td>
+<td>player</td>
+<td>玩家用户名</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>string</td>
+<td>url</td>
+<td>游戏登录链接</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>bool</td>
+<td>new_player</td>
+<td>布尔变量</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h2 id='2db86dc725'>退出游戏</h2>
+<p>此接口用于生成玩家踢出游戏的链接</p>
+<h3 id='0e84ef42ae-3'>请求地址</h3>
+<p><code>{{url}}/player/logout</code></p>
+<h3 id='1f9ac54b15-3'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>string</td>
+<td>username</td>
+<td>玩家帐号</td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-3'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>status</td>
+<td>状态码</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>string</td>
+<td>message</td>
+<td>玩家下线信息</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
+<td>string</td>
+<td>data</td>
+<td>返回空值</td>
 </tr>
 <tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h2 id='fea904ea12'>玩家是否在线</h2>
+<p>此接口用于生成检测玩家是否在线的链接</p>
+<h3 id='0e84ef42ae-4'>请求地址</h3>
+<p><code>{{url}}/player/online</code></p>
+<h3 id='1f9ac54b15-4'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td>string</td>
+<td>username</td>
+<td>玩家帐号</td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-4'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>player</td>
+<td>玩家帐号</td>
+</tr>
+<tr>
+<td>Bool</td>
+<td>is_online</td>
+<td>False ：玩家不在线；True： 玩家在线</td>
+</tr>
+<tr>
+<td>string</td>
+<td>game_room</td>
+<td>返回空值</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h2 id='b5719097cd'>查询玩家余额</h2>
+<p>此接口用于生成玩家余额查询的链接</p>
+<h3 id='0e84ef42ae-5'>请求地址</h3>
+<p><code>{{url}}/credit/balance</code></p>
+<h3 id='1f9ac54b15-5'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>username</td>
+<td>玩家帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-5'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>player</td>
+<td>玩家用户名</td>
+</tr>
+<tr>
+<td>string</td>
+<td>balance</td>
+<td>玩家可用额度</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h2 id='ad2df21d2b'>转账查询</h2>
+<p>此接口用于生成查询玩家转账记录的链接</p>
+<h3 id='0e84ef42ae-6'>请求地址</h3>
+<p><code>{{url}}/credit/check</code></p>
+<h3 id='1f9ac54b15-6'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>transaction</td>
+<td>转账号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-6'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>transaction</td>
+<td>转账号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>amount</td>
+<td>转账金额</td>
+</tr>
+<tr>
+<td>string</td>
+<td>status</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td>string</td>
+<td>message</td>
+<td>转账成功</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h2 id='33f595e14e'>玩家存款</h2>
+<p>此接口用于生成给玩家充值的链接</p>
+<h3 id='0e84ef42ae-7'>请求地址</h3>
+<p><code>{{url}}/credit/deposit</code></p>
+<h3 id='1f9ac54b15-7'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>username</td>
+<td>玩家帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>amount</td>
+<td>充值金额</td>
+</tr>
+<tr>
+<td>string</td>
+<td>transaction</td>
+<td>充值序列号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-7'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>player</td>
+<td>玩家帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>blance</td>
+<td>玩家帐号余额</td>
+</tr>
+<tr>
+<td>string</td>
+<td>transaction</td>
+<td>转账号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>receipt</td>
+<td>收据号</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h2 id='0be10b6b8f'>玩家取款</h2>
+<p>此接口用于生成给玩家取款的链接</p>
+<h3 id='0e84ef42ae-8'>请求地址</h3>
+<p><code>{{url}}/credit/withdrawal</code></p>
+<h3 id='1f9ac54b15-8'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>username</td>
+<td>玩家帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>amount</td>
+<td>取款金额</td>
+</tr>
+<tr>
+<td>string</td>
+<td>transaction</td>
+<td>取款序列号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-8'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>player</td>
+<td>玩家帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>blance</td>
+<td>玩家取款后账户余额</td>
+</tr>
+<tr>
+<td>string</td>
+<td>transaction</td>
+<td>取款号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>receipt</td>
+<td>收据号</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h2 id='d3c6a29a67'>游戏列表</h2>
+<p>此接口用于生成游戏列表的链接</p>
+<h3 id='0e84ef42ae-9'>请求地址</h3>
+<p><code>{{url}}/game/list</code></p>
+<h3 id='1f9ac54b15-9'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-9'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>game_id</td>
+<td>游戏ID</td>
+</tr>
+<tr>
+<td>string</td>
+<td>game_kind</td>
+<td>游戏类型</td>
+</tr>
+<tr>
+<td>string</td>
+<td>game_room</td>
+<td>房间类型</td>
+</tr>
+<tr>
+<td>string</td>
+<td>game_name</td>
+<td>游戏名称</td>
+</tr>
+</tbody></table>
+<h2 id='c575acdff7'>代理盈利</h2>
+<p>此接口用于生成查询代理盈利的链接</p>
+<h3 id='0e84ef42ae-10'>请求地址</h3>
+<p><code>{{url}}/report/agent/profit</code></p>
+<h3 id='1f9ac54b15-10'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>start_time</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>End_time</td>
+<td>结束时间</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-10'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理编号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>agent_name</td>
+<td>代理名称</td>
+</tr>
+<tr>
+<td>string</td>
+<td>total</td>
+<td>盈利总数</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h2 id='325501528c'>玩家盈利</h2>
+<p>此接口用于生成查询玩家盈利的链接</p>
+<h3 id='0e84ef42ae-11'>请求地址</h3>
+<p><code>{{url}}/report/player/profit</code></p>
+<h3 id='1f9ac54b15-11'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>start_time</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>end_time</td>
+<td>结束时间</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-11'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理编号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>agent_name</td>
+<td>代理名称</td>
+</tr>
+<tr>
+<td>string</td>
+<td>total</td>
+<td>盈利总数</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h2 id='e8a022ef40'>游戏记录查询</h2>
+<p>此接口用于生成查询游戏记录的链接</p>
+<h3 id='0e84ef42ae-12'>请求地址</h3>
+<p><code>{{url}}/history/query</code></p>
+<h3 id='1f9ac54b15-12'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>start_time</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>End_time</td>
+<td>结束时间</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-12'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>total</td>
+<td>游戏记录总条数</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cur_page</td>
+<td>显示页面总数</td>
+</tr>
+<tr>
+<td>string</td>
+<td>histories</td>
+<td>游戏记录明细</td>
+</tr>
+<tr>
+<td>string</td>
+<td>round_id</td>
+<td>游戏局号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>session_id</td>
+<td>游戏会话号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>username</td>
+<td>玩家帐号</td>
+</tr>
+<tr>
+<td>string</td>
+<td>game_kind</td>
+<td>游戏类型</td>
+</tr>
+<tr>
+<td>string</td>
+<td>bet</td>
+<td>赌注</td>
+</tr>
+<tr>
+<td>string</td>
+<td>win</td>
+<td>盈利</td>
+</tr>
+<tr>
+<td>string</td>
+<td>tax</td>
+<td>反水</td>
+</tr>
+<tr>
+<td>string</td>
+<td>valid_wager</td>
+<td>游戏赌注</td>
+</tr>
+<tr>
+<td>string</td>
+<td>before_balance</td>
+<td>游戏开始前的余额</td>
+</tr>
+<tr>
+<td>string</td>
+<td>change_balance</td>
+<td>游戏中变更的余额</td>
+</tr>
+<tr>
+<td>string</td>
+<td>ending_balance</td>
+<td>游戏介绍后的余额</td>
+</tr>
+<tr>
+<td>string</td>
+<td>start_time</td>
+<td>游戏开始时间</td>
+</tr>
+<tr>
+<td>string</td>
+<td>end_time</td>
+<td>游戏结束时间</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h2 id='c7a5042e5c'>游戏明细查询</h2>
+<p>此接口用于生成查询游戏明细的链接</p>
+<h3 id='0e84ef42ae-13'>请求地址</h3>
+<p><code>{{url}}/report/player/profit</code></p>
+<h3 id='1f9ac54b15-13'>请求参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>agent</td>
+<td>代理帐号</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>round_id</td>
+<td>游戏局号</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>end_time</td>
+<td>结束时间</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hash</td>
+<td>哈希值</td>
+</tr>
+</tbody></table>
+<h3 id='70bdef7e25-13'>返回参数</h3>
+<table><thead>
+<tr>
+<th>类型</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>url</td>
+<td>查询结果对应打开链接</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>time</td>
+<td>当前时间</td>
+</tr>
+</tbody></table>
+<h1 id='v1-0'>文档版本 V1.0</h1>
+<table><thead>
+<tr>
+<th>版本</th>
+<th>修订人</th>
+<th>修订日期</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>V1.0</td>
+<td>Ace</td>
+<td>2019/03/09</td>
+<td>创建</td>
 </tr>
 </tbody></table>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
+                <a href="#" data-language-name="php">php</a>
+                <a href="#" data-language-name="java">java</a>
                 <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
